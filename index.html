@@ -9,23 +9,20 @@
       navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
    }
   </script>
-  <title>Hello PWA.</title>
-  <style>
-    body {
-      text-align:center;
-      font-size: 40px;
-      vertical-align: middle;
-    }
-    .image {
-      width: 80%; 
-      margin: auto;
-      display: block;
-    }
-  </style>
+  <title>TAP10</title>
+  <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
-  <h1>Hello PWA.</h1>
-  <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
-  <a href="p.html">p.html</a>
+  <section class="container">
+    <h1 class="title">10秒で何回タップできるか</h1>
+    <button id="js-tapBtn" class="btn-tap" disabled>
+      <span id="js-count"></span><br>タップ!!
+    </button>
+    <div class="time">残り時間 <span id="js-time"></span> 秒</div>
+    <button id="js-startBtn" class="btn">START</button>
+  </section>
+
+  <script src="app.js"></script>
+  
 </body>
 </html>
